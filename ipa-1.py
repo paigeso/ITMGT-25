@@ -36,10 +36,10 @@ def savings(gross_pay, tax_rate, expenses):
     int(gross_pay)
     float(tax_rate)
     int(expenses)
-    tax = round(gross_pay*tax_rate)
+    tax = gross_pay*tax_rate
     takehome_pay = (gross_pay-tax) - expenses
     
-    return takehome_pay
+    return round(takehome_pay)
 
 savings(12000, 0.05, 1000)
 
@@ -118,9 +118,9 @@ def interest(principal, rate, periods):
     float(rate)
     int(periods)
     simple_interest = principal*(rate*periods)
-    interest = round(principal + simple_interest)
+    interest = principal + simple_interest
     
-    return interest
+    return round(interest)
 
 interest(12000, 0.05, 5)
 
